@@ -1,0 +1,92 @@
+
+<div class="box">
+    <div class="loginbox">
+        
+        <div class="loginform">
+            <mat-card>
+                <mat-card-title>Flipkart Login</mat-card-title>
+                <mat-tab-group>
+                  <mat-tab label="Log In">
+                    <mat-card-content class="form">
+                      <form [formGroup]="form">
+                        <p>
+                          <mat-form-field>
+                            <input type="email" matInput placeholder="Enter your email " formControlName="user_email" required>
+                            <mat-icon matSuffix><span class="material-icons-outlined">mail</span>
+                            </mat-icon>
+                          </mat-form-field>
+                        </p>
+              
+                        <p>
+                          <mat-form-field>
+                            <input type="password" matInput placeholder="Enter your password" formControlName="user_password" required>
+                            <mat-icon matSuffix><span class="material-icons-outlined">lock_open</span></mat-icon>
+                          </mat-form-field>
+                        </p>
+                        
+                        <div class="button">
+                          <button id="btn" type="submit" mat-stroked-button color="accent" (click)="login()">Login</button>
+                        </div>
+              
+                      </form>
+                    </mat-card-content>
+                  </mat-tab>
+
+                  <!-- sign up form -->
+                  <!-- SELECT u.user_id, u.user_name, u.user_email, u.user_address, u.user_ph_no, u.user_password from tbl_user_master -->
+
+                  <mat-tab label="Sign Up"> 
+                    <mat-card-content class="form">
+                      <form [formGroup]="form">
+                        <p>
+                          <mat-form-field>
+                            <input type="email" matInput placeholder="Enter your name" formControlName="user_email" required>
+                             <mat-icon matSuffix><span class="material-icons-outlined">account_circle</span></mat-icon>
+                          </mat-form-field>
+                        </p>
+                        <p>
+                          <mat-form-field>
+                            <input type="password" matInput placeholder="Enter your username" formControlName="user_password" required>
+                             <mat-icon matSuffix><span class="material-icons-outlined">badge</span></mat-icon>
+                          </mat-form-field>
+                        </p>
+                        <p>
+                          <mat-form-field>
+                            <input type="password" matInput placeholder="Enter your email" formControlName="user_password" required>
+                             <mat-icon matSuffix><span class="material-icons-outlined">mail</span></mat-icon>
+                          </mat-form-field>
+                        </p>
+                        <p>
+                          <mat-form-field>
+                            <input type="password" matInput placeholder="Enter your password" formControlName="user_password" required>
+                             <mat-icon matSuffix><span class="material-icons-outlined">lock</span></mat-icon>
+                          </mat-form-field>
+                        </p>
+                        <p>
+                          <mat-form-field>
+                            <input type="number" matInput placeholder="Enter your phone no" formControlName="user_password" required>
+                             <mat-icon matSuffix><span class="material-icons-outlined">local_phone</span></mat-icon>
+                          </mat-form-field>
+                        </p>
+                        <p>
+                          <mat-form-field>
+                            <input type="password" matInput placeholder="Enter your address" formControlName="user_password" required>
+                             <mat-icon matSuffix><span class="material-icons-outlined">home</span></mat-icon>
+                          </mat-form-field>
+                        </p>
+              
+                      
+              
+                        <div class="button">
+                          <button id="btn" type="submit" color="accent" mat-stroked-button (click)="saveSignUp()">Sign Up</button>
+                        </div>
+              
+                      </form>
+                    </mat-card-content>
+                  </mat-tab>
+                </mat-tab-group>
+          
+        </mat-card>
+        </div>
+    </div>
+</div>
